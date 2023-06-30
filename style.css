@@ -1,0 +1,149 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --cinza-secundario: #C0C0C0;
+    --botao-azul: #167BF7;
+    --cor-de-fundo: #00030C;
+    --fonte-principal:'Inter';
+} /*Criando variavies CSS*/
+
+body {
+    background-color: var(--cor-de-fundo); /*Busca a variavel criada no começo do código*/
+    color: var(--branco-principal);
+    font-family: var(--fonte-principal);
+    font-size: 16px; /*consideramos o tamanho de fonte que mais se repete. As de outros tamanhos serão modificada nas class*/
+    font-weight: 400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    background-image: url("images/Background.png"); /*recomendasse usar este parametro quando se tratar de algo apenas decorativo, sem texto alternativo*/
+    background-repeat: no-repeat;
+    background-size: contain; /*ocupa todo o container do bloco*/
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    height: 100vh; /*utiliza 100% da altura*/
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.container__titulo {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.container__botao {
+    background-color: var(--botao-azul);
+    border-radius: 5px;
+    padding: 1em;
+    color: var(--branco-principal);
+    display: block;
+    text-decoration: none; /*tira a decoração (sublinado) do texto*/
+    margin-bottom: 1em;
+} /*Configurações de botão de direcionamento, invpes de usar a tag button*/
+
+.container__botao:hover {
+    transform: scale(1.1);
+}
+
+.botao__secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);
+}
+
+.container__aviso {
+    font-size: 12px;
+    color: var(--cinza-secundario);
+}
+
+.container__imagem {
+    margin: 1em 0 2em 0;
+}
+
+.secundario {
+    align-items: center;
+    margin: 0 10em;
+}
+
+.secundario__imagem {
+    width: 80%;
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    font-size: 16px;
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+    display: inline-block;
+    margin-top: 1em;
+}/*pega as melhores partes do inline e do block. Inline: transforma o elemento em linha, ocupando só o espaço dele..no block, faz a quebra de linha do texto de cima e permite usar o heigth*/
+
+.dispositivo__titulo {
+    font-size: 48px;
+    text-align: center;
+}
+
+.dispositivos__lista {
+    display: flex; /*transformou a lista em flex container, colocando os itens um do lado do outro na mesma linha*/
+    justify-content: center; /*centralizou a lista*/
+    list-style-type: none; /*limpa os pontos marcando os itens da lista*/
+    text-align: center;
+    margin: 5em 0;
+}
+
+.lista__item {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__logo {
+    margin-bottom: 1em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+
+.lista__link a{
+    text-decoration: none;/*remove a decoração dos textos*/
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 0.7em 10em;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+    text-decoration: underline;
+}
